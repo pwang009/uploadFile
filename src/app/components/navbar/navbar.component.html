@@ -9,9 +9,10 @@
 
   <mat-sidenav-container>
     <mat-sidenav opened mode="side" [style.width]="sidenavwidth()">
-      <app-custom-sidenav />
+      <!-- <app-custom-sidenav /> -->
+      <app-custom-sidenav [collapsed]="collapsed()"/>
     </mat-sidenav>
-    <mat-sidenav-content class="content" [style.margin-left]="sidenavwidth()">
+    <mat-sidenav-content class="content" [style.margin-left]="sidenavwidth()"> 
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
