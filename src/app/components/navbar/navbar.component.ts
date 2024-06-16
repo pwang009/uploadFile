@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,5 +15,7 @@ import { CustomSidenavComponent } from "../custom-sidenav/custom-sidenav.compone
 })
 
 export class NavbarComponent {
+    collapsed = signal(false);
 
+    sidenavwidth = computed(() => this.collapsed() ? '64px' : '240px')
 }
