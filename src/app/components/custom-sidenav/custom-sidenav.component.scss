@@ -9,6 +9,8 @@
     }
 
     .header-text {
+
+        height: 3rem;
         > h2 {
             margin: 0;
             font-size: 1rem;
@@ -23,6 +25,19 @@
 
     .hide-header-text {
         opacity: 0;
-        height: 0px;
+        height: 0px !important;
     }
+}
+
+.host * {
+    transition: all 500ms ease-in-out;
+}
+
+.menu-item {
+    border-left: 3px solid;
+    border-left-color: rgba(0,0,0,0)
+}
+.selected-menu-item {
+    border-left-color: blue;
+    background: rgba(0,0,0,0.05);
 }
