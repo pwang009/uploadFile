@@ -11,16 +11,17 @@ import { FileUploadService } from '../../../services/upload-file.service';
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.scss'
 })
-export class CommentsComponent implements OnInit {
+// export class CommentsComponent implements OnInit {
+  export class CommentsComponent {
   currentFile?: File;
   message = '';
   fileInfos?: Observable<any>;
 
   constructor(private uploadService: FileUploadService) { }
 
-  ngOnInit(): void {
-    this.fileInfos = this.uploadService.getFiles();
-  }
+  // ngOnInit(): void {
+  //   this.fileInfos = this.uploadService.getFiles();
+  // }
   selectFile(event: any): void {
     this.currentFile = event.target.files.item(0);
   }
@@ -31,7 +32,7 @@ export class CommentsComponent implements OnInit {
         next: (event: any) => {
           if (event instanceof HttpResponse) {
             this.message = event.body.message;
-            this.fileInfos = this.uploadService.getFiles();
+            // this.fileInfos = this.uploadService.getFiles();
           }
         },
         error: (err: any) => {

@@ -23,4 +23,3 @@ export class FileUploadService {
     return this.http.get(`${this.baseUrl}/files`);
   }
 }
-  
